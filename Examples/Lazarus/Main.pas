@@ -132,7 +132,7 @@ begin
   // create an API Converter instance
   PDFConvert := TGS_PdfConverter.Create(ADir);
   // set the events for the Ghostscript and Wrapper output
-  PDFConvert.OnAfterExecute := AfterExecute;
+  PDFConvert.OnAfterExecute := @AfterExecute;
   PDFConvert.OnStdError := StdError;
   PDFConvert.OnStdIn := StdIn;
   PDFConvert.OnStdOut := StdOut;
